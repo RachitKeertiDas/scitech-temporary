@@ -58,10 +58,29 @@ function myFunction() {
 }
 
 window.onload = () => {
-  
-  
   for (let i = 0 ; i < window.allSortButtons.length ; i++)
   {
     window.allSortButtons[i].addEventListener("click", onSortButtonClick);
   }
+  document.getElementsByClassName("all-photos")[0].addEventListener('animationend', () => {
+    document.getElementsByClassName("all-photos")[0].classList.remove("zoomIn");
+  });
+  document.getElementsByClassName("all-photos")[1].addEventListener('animationend', () => {
+    document.getElementsByClassName("all-photos")[1].classList.remove("zoomIn");
+  });
+  document.getElementsByClassName("all-photos")[2].addEventListener('animationend', () => {
+    document.getElementsByClassName("all-photos")[2].classList.remove("zoomIn");
+  });
+  document.getElementsByClassName("all-photos")[3].addEventListener('animationend', () => {
+    document.getElementsByClassName("all-photos")[3].classList.remove("zoomIn");
+  });
+  document.getElementsByClassName("all-photos")[4].addEventListener('animationend', () => {
+    document.getElementsByClassName("all-photos")[4].classList.remove("zoomIn");
+  });
+  document.getElementsByClassName("all-photos")[5].addEventListener('animationend', () => {
+    document.getElementsByClassName("all-photos")[5].classList.remove("zoomIn");
+  });
+  // document.getElementsByClassName("zoomIn")[0].addEventListener('animationend', () => {
+  //   document.getElementsByClassName("zoomIn")[0].classList.remove("zoomIn");
+  // });
 };
