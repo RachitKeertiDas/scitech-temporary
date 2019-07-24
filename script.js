@@ -4,16 +4,26 @@ window.allSortButtons = document.getElementsByClassName("sort-button");
 window.onscroll = function() {myFunction()};
 var onSortButtonClick = (event) => {
   let sortCategory = event.currentTarget.id.substring(5);
+  console.log(sortCategory);
+    for (let whatever = 0 ; whatever < window.allPhotos.length ; whatever++)
+    {
+     let current = window.allPhotos[whatever]; 
+     current.classList.remove("animated","zoomIn");
+     current.style.display = "none";
+    } 
   for (let whatever = 0 ; whatever < window.allPhotos.length ; whatever++)
   {
     let current = window.allPhotos[whatever]; 
+    console.log(current.classList + " " + sortCategory);
+
     if (current.classList.contains(sortCategory))
     {
-      current.style.display = "block";
+      console.log("Blocked");
+       current.classList.add("animated","zoomIn");
+     current.style.display = "block";
     }
-    else {
-      current.style.display = "none";
-    }
+    
+
   }
 };
 var prevNav = null;
