@@ -58,29 +58,39 @@ function myFunction() {
 }
 
 window.onload = () => {
+  
+  
   for (let i = 0 ; i < window.allSortButtons.length ; i++)
   {
     window.allSortButtons[i].addEventListener("click", onSortButtonClick);
   }
-  document.getElementsByClassName("all-photos")[0].addEventListener('animationend', () => {
-    document.getElementsByClassName("all-photos")[0].classList.remove("zoomIn");
-  });
-  document.getElementsByClassName("all-photos")[1].addEventListener('animationend', () => {
-    document.getElementsByClassName("all-photos")[1].classList.remove("zoomIn");
-  });
-  document.getElementsByClassName("all-photos")[2].addEventListener('animationend', () => {
-    document.getElementsByClassName("all-photos")[2].classList.remove("zoomIn");
-  });
-  document.getElementsByClassName("all-photos")[3].addEventListener('animationend', () => {
-    document.getElementsByClassName("all-photos")[3].classList.remove("zoomIn");
-  });
-  document.getElementsByClassName("all-photos")[4].addEventListener('animationend', () => {
-    document.getElementsByClassName("all-photos")[4].classList.remove("zoomIn");
-  });
-  document.getElementsByClassName("all-photos")[5].addEventListener('animationend', () => {
-    document.getElementsByClassName("all-photos")[5].classList.remove("zoomIn");
-  });
-  // document.getElementsByClassName("zoomIn")[0].addEventListener('animationend', () => {
-  //   document.getElementsByClassName("zoomIn")[0].classList.remove("zoomIn");
-  // });
 };
+
+
+/*Gallery SLideshow*/
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
