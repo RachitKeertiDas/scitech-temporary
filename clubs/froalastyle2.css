@@ -1582,6 +1582,10 @@ hr
 a {
     text-decoration: none;
 }
+a:hover
+{
+    border-color: rgb(0,0,0,0);
+}
 .lead.white
 {
     color:white;
