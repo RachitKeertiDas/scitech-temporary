@@ -4,6 +4,9 @@
   top: 0;
   width: 100%;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 .navbar.is-dark.sticky + .content {
@@ -484,8 +487,8 @@ div.content.all
 @media only screen and (min-width: 800px) {
   .flip-card
   {
-  width: 23vw;
-  height: 23vw;
+  width: 20vw;
+  height: 20vw;
 }
 }
 
