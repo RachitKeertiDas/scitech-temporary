@@ -413,7 +413,7 @@ div.content.all
 }
 .contact 
 {
-	margin-left: 1vh;
+	margin-left:1vh;
 }
 .field label
 {
@@ -423,7 +423,7 @@ div.content.all
 {
 	border-radius: 0;
 	background-color: rgb(0,0,0,0);
-	color:rgb(115, 123, 132);
+  color:#b2bec3;
 	border-color: rgb(65, 72, 81);
 	transition: 0.2s;
 	font-family: 'Roboto', sans-serif;
@@ -538,7 +538,8 @@ div.content.all
 .flip-card-front {
   background-color: black;
   color: black;
-  z-index: 2;
+  backface-visibility: hidden;
+  z-index: 1;
 }
 
 .flip-card-back {
