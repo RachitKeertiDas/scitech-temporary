@@ -1,8 +1,13 @@
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+
+
 .navbar.is-dark.sticky {
   position: fixed;
   top: 0;
   width: 100%;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
@@ -11,8 +16,18 @@
 }
 
 /*///////////////////////Home////////////////////////*/
+h1.title
+{
+  font-family: 'Montserrat';
+  font-weight:700;
+  font-size: 30px;
 
-
+}
+h2.title
+{
+  font-family: 'Sen';
+  font-weight: 400; 
+}
 section.home
 {
 	background-image:  linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('images/home-bg.jpg');
@@ -26,7 +41,6 @@ button.scitech-week.is-primary
 	border-radius: 0px;
 	transition: 0.2s;
 }
-
 button.scitech-week.is-primary:hover
 {
   background-color: rgb(59, 144, 144);
@@ -79,7 +93,7 @@ a.navbar-item :hover::before {
 /*/////////////////////////////////////////////////////////////////////////*/
 
 .content {
-  background-color: rgb(53, 59, 67);
+  background-color: rgb(30, 39, 46);
   color:rgb(198, 198, 198);
   padding: 60px;
 }
@@ -97,6 +111,8 @@ div.container.container-last
 {
 	text-align: center;
 	color:white;
+  font-family: 'Montserrat',sans-serif; 
+  font-weight: 500;
 }
 .teal
 {
@@ -443,13 +459,13 @@ div.content.all
 /*//////////////////////////////////////////Footer/////////////////////////////////////*/
 .footer
 {
-	background-color: rgb(53, 59, 67);
+	background-color: rgb(30, 39, 46);
 	padding-bottom: 4em;
 }
 .footer .flip-card-front span
 {
 	background-color: rgb(41, 47, 54);
-	color: rgb(53, 59, 67);
+	color: rgb(30, 39, 46);
 }
 .footer .flip-card-back span
 {
@@ -484,9 +500,11 @@ div.content.all
 @media only screen and (min-width: 800px) {
   .flip-card
   {
-  width: 23vw;
-  height: 23vw;
+  width: 19.5vw;
+  height: 19.5vw;
+  margin-bottom: 3vh;
 }
+
 }
 
 .footer .flip-card

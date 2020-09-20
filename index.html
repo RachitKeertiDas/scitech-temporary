@@ -13,22 +13,30 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap" rel="stylesheet">
     <link rel="preconnect" href="res.cloudinary.com" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <title>SciTech Council, IITH</title>
+    <title>SciTech Council | IIT Hyderabad</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Sen:400,700&display=swap" rel="stylesheet">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+</style> 
 </head>
 
 <body>
     <section class="hero home is-dark is-fullheight has-text-centered" id="home">
         <div class="hero-body">
-            <div class="container container-home">
+            <div class="container container-home" data-aos="fade-up" data-aos-duration="2000" >
                 <h1 class="title is-1">
-                    Scitech Council,IIT Hyderabad
-                </h1>
+                   Sci-Tech Council</h1>
+                   <h2 class="title is-1">
+                   IIT Hyderabad
+                </h2>
             </div>
         </div>
     </section>
     <nav class="navbar is-dark" id="navbar">
-        <div id="navbarMenuHeroA" class="navbar-menu">
+        <div id="navbarMenuHeroA" class="navbar-menu" >
             <div class="navbar-start">
                 <span class="navbar-item">
                     <span class="common-head" style="color:rgb(87, 203, 204);">Scitech Council</span>
@@ -56,7 +64,7 @@
                     <span >
                      Contact</span>
                 </a>
-                <a class="navbar-item">
+               <!-- <a class="navbar-item">
                   
                     <span>
                        Gitter
@@ -67,109 +75,17 @@
                     <span>
                        Q&A
                     </span>
-                </a>
+                </a>-->
+
             </div>
         </div>
     </nav>
+
+
+
+
     <div class="content all">
-        <div class="container works" id="projects">
-            <p class="is-size-1-desktop is-size-2-touch sec-title navbarControl">Our<span class="teal"> Works</span></p>
-            <div class="works-nav has-text-centered">
-                <ul>
-                    <li class="is-active">
-                        <a id="sort-all-photos" class="sort-button button">
-                          <span>All</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a id="sort-nature-space" class="sort-button button">
-                          <span>Nature and Space</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a id="sort-electronics-robotics-auto" class="sort-button button">
-                          <span>Electronics, Robotics and Automobiles</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a id="sort-web-coding" class="sort-button button">
-                          <span>Web and Coding</span>
-                        </a>
-                      </li>
-                </ul>
-            </div>
-           
-            <div class="work-list columns has-text-centered is-2 is-variable is-desktop is-multiline">
-                <div class="column is-one-third-desktop electronics-robotics-auto all-photos animated is-one-third-tablet zoomIn">
-            
-                  <div class="item-container design ">
-                   <img src="https://res.cloudinary.com/dxj3caopc/image/upload/v1551662860/Copy_of_st-25.jpg" alt="Avatar" class="work-image">
-                    <div class="middle">
-                      <div class="text">
-                        <p class="middle-title">Aero</p>
-                        <p class="middle-desc">Aero club showing off!</p>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="column is-one-third-desktop web-coding all-photos animated is-one-third-tablet zoomIn ">
-                        <div class="item-container design">
-                   <img src="https://res.cloudinary.com/dxj3caopc/image/upload/v1551662860/Copy_of_st-37.jpg" alt="Avatar" class="work-image">
-                    <div class="middle">
-                      <div class="text">
-                        <p class="middle-title">Lambda Presentation</p>
-                        <p class="middle-desc">Just another web and coding club that shall endure</p>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="column is-one-third-desktop  photography nature-space all-photos animated is-one-third-tablet zoomIn">
-                  <div class="item-container">
-                   <img src="https://res.cloudinary.com/dxj3caopc/image/upload/v1551662860/Copy_of_st-49.jpg" alt="Avatar" class="work-image">
-                    <div class="middle">
-                      <div class="text">
-                        <p class="middle-title">Explaining Astronomy</p>
-                        <p class="middle-desc">Cepheid in its orientation</p>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="column is-one-third-desktop  nature-space all-photos animated is-one-third-tablet zoomIn">
-                  <div class="item-container photography">
-                   <img src="https://res.cloudinary.com/dxj3caopc/image/upload/v1551662860/Copy_of_st-55.jpg" alt="Avatar" class="work-image">
-                    <div class="middle">
-                      <div class="text">
-                        <p class="middle-title">Prakriti</p>
-                        <p class="middle-desc"></p>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="column is-one-third-desktop  electronics-robotics-auto all-photos animated is-one-third-tablet zoomIn">
-                 <div class="item-container design">
-                   <img src="https://res.cloudinary.com/dxj3caopc/image/upload/v1551663555/S.T.-26.jpg" alt="Avatar" class="work-image">
-                    <div class="middle">
-                      <div class="text">
-                        <p class="middle-title">The Song Changer</p>
-                        <p class="middle-desc">Yet another Elektronica Project</p>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- <div class="column is-one-third-desktop web-coding all-photos animated is-one-third-tablet zoomIn">
-                  <div class="item-container devlopment">
-                   <img src="http://gymkhana.iith.ac.in/sci-tech/kludge/images/album1/2.jpg" alt="Avatar" class="work-image">
-                    <div class="middle">
-                      <div class="text">
-                        <p class="middle-title">Kludge Night</p>
-                        <p class="middle-desc">Caffeine and nmap</p>
-                        </div>
-                    </div>
-                  </div>
-                </div> -->
-              </div>
-        </div>
-        <div class="container clubs" id="clubs">
+    	<div class="container clubs" id="clubs">
             <p class="is-size-1-desktop is-size-2-touch sec-title navbarControl">Scitech<span class="teal"> Clubs</span></p>
             <div class="club-list columns has-text-centered is-2 is-variable is-multiline is-centered">
 
@@ -179,7 +95,7 @@
                 <div class="flip-card-front">
                 <img src="https://res.cloudinary.com/dwjvi33ve/image/upload/v1563539032/Aero/Aero_Logo_so0c3v.png" alt="Avatar" style="width:100%;height:100%;">
                 </div>
-                <div class="flip-card-back" onclick="location.href='clubs/aero.html'"">
+                <div class="flip-card-back" onclick="location.href='clubs/aero.html'">
                      <h1>Aero Club</h1> 
                           <p>Aeronautics and Drone Design Club</p> 
                            <div class="mask has-text-centered">
@@ -373,7 +289,106 @@
       </div>
 
 
-
+                    <!-- Club section ends   -->
+        <div class="container works" id="projects">
+            <p class="is-size-1-desktop is-size-2-touch sec-title navbarControl">Recent<span class="teal"> Sessions</span></p>
+            <div class="works-nav has-text-centered">
+                <ul>
+                    <li class="is-active">
+                        <a id="sort-all-photos" class="sort-button button">
+                          <span>All</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a id="sort-nature-space" class="sort-button button">
+                          <span>Nature and Space</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a id="sort-electronics-robotics-auto" class="sort-button button">
+                          <span>Electronics, Robotics and Automobiles</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a id="sort-web-coding" class="sort-button button">
+                          <span>Web and Coding</span>
+                        </a>
+                      </li>
+                </ul>
+            </div>
+           
+            <div class="work-list columns has-text-centered is-2 is-variable is-desktop is-multiline">
+                <div class="column is-one-third-desktop electronics-robotics-auto all-photos animated is-one-third-tablet zoomIn">
+            
+                  <div class="item-container design ">
+                   <img src="https://res.cloudinary.com/dxj3caopc/image/upload/v1551662860/Copy_of_st-25.jpg" alt="Avatar" class="work-image">
+                    <div class="middle">
+                      <div class="text">
+                        <p class="middle-title">Aero</p>
+                        <p class="middle-desc">Aero club showing off!</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-one-third-desktop web-coding all-photos animated is-one-third-tablet zoomIn ">
+                        <div class="item-container design">
+                   <img src="https://res.cloudinary.com/dxj3caopc/image/upload/v1551662860/Copy_of_st-37.jpg" alt="Avatar" class="work-image">
+                    <div class="middle">
+                      <div class="text">
+                        <p class="middle-title">Lambda Presentation</p>
+                        <p class="middle-desc">Just another web and coding club that shall endure</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-one-third-desktop  photography nature-space all-photos animated is-one-third-tablet zoomIn">
+                  <div class="item-container">
+                   <img src="https://res.cloudinary.com/dxj3caopc/image/upload/v1551662860/Copy_of_st-49.jpg" alt="Avatar" class="work-image">
+                    <div class="middle">
+                      <div class="text">
+                        <p class="middle-title">Explaining Astronomy</p>
+                        <p class="middle-desc">Cepheid in its orientation</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-one-third-desktop  nature-space all-photos animated is-one-third-tablet zoomIn">
+                  <div class="item-container photography">
+                   <img src="https://res.cloudinary.com/dxj3caopc/image/upload/v1551662860/Copy_of_st-55.jpg" alt="Avatar" class="work-image">
+                    <div class="middle">
+                      <div class="text">
+                        <p class="middle-title">Prakriti</p>
+                        <p class="middle-desc"></p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-one-third-desktop  electronics-robotics-auto all-photos animated is-one-third-tablet zoomIn">
+                 <div class="item-container design">
+                   <img src="https://res.cloudinary.com/dxj3caopc/image/upload/v1551663555/S.T.-26.jpg" alt="Avatar" class="work-image">
+                    <div class="middle">
+                      <div class="text">
+                        <p class="middle-title">The Song Changer</p>
+                        <p class="middle-desc">Yet another Elektronica Project</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="column is-one-third-desktop web-coding all-photos animated is-one-third-tablet zoomIn">
+                  <div class="item-container devlopment">
+                   <img src="http://gymkhana.iith.ac.in/sci-tech/kludge/images/album1/2.jpg" alt="Avatar" class="work-image">
+                    <div class="middle">
+                      <div class="text">
+                        <p class="middle-title">Kludge Night</p>
+                        <p class="middle-desc">Caffeine and nmap</p>
+                        </div>
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+        </div>
+        <!-- Club cards begin -->
+        
                 <!-- <div class="column is-one-third-desktop is-one-third-tablet item">
                     <div class="view" style="background-image:url('images/elektronica.png');">
                         <img src="images/elektronica.png" />
@@ -524,10 +539,8 @@
         </div>
 
 
-
-
         <div class="posts-contain container container-last" id="blogs">
-            <p class="navbarControl is-size-1-desktop is-size-2-touch sec-title">Latest<span class="teal"> Posts</span></p>
+            <p class="navbarControl is-size-1-desktop is-size-2-touch sec-title">Our<span class="teal"> Projects</span></p>
             <!-- <div class="post columns has-text-centered is-2 is-variable is-desktop is-multiline is-centered">
                 <div class="column is-5-desktop item ">
                     <div class="item-image">
@@ -586,11 +599,7 @@
   <span class="dot" onclick="currentSlide(3)"></span> 
 </div>
 
-            
- 
-
-
-            <!-- <div class="column has-text-centered">
+<!-- <div class="column has-text-centered">
                 <a class="all-posts button" style="font-family: 'Roboto Mono', monospace; padding: 2.5vh; border-radius: 0vh;">VIEW ALL POSTS</a>
             </div> -->
         </div>
@@ -603,9 +612,9 @@
                   
                   <div class="has-text-centered">
                   <figure class="image is-128x128" style="margin-left: auto; margin-right: auto">
-                    <img class="is-rounded" src="https://res.cloudinary.com/dwjvi33ve/image/upload/v1564208837/Miscellaneous/Raktim_Gautam_Goswami_Scitech_cfwofq.jpg">
+                    <img class="is-rounded" src="https://media-exp1.licdn.com/dms/image/C5103AQFZ7ZoU6ZBCKw/profile-displayphoto-shrink_200_200/0?e=1605744000&v=beta&t=A21R7QCHqOdNtP8ZQ9ALm7dZBLyNXV2fYSp62Nywpsc">
                   </figure>
-                  <p class="is-size-4" style="color: rgb(155, 160, 165);">Raktim Goswami</p>
+                  <p class="is-size-4" style="color: rgb(155, 160, 165);">Sunny Mane</p>
                   -Scitech Secretary
                   </div>
 
@@ -614,7 +623,7 @@
                         <span class="icon">
                             <i class="fas fa-phone"></i>
                         </span>
-                        <span>Phone: 91 70025 18607</span>
+                        <span>Phone: +91 96190 19136</span>
                     </div>
                     <div class="contact">
                         <span class="icon">
@@ -729,11 +738,13 @@
                         </li>
                     </ul>
                 </p>
-                <p class="credits is-size-7"> Lambda Team. Copyright © 2019.
+                <p class="credits is-size-7"> Lambda Team. Copyright © 2020.
             </div>
         </div>
     </div>
     <script src="script.js"></script>
+    <script>AOS.init();
+</script>
 </body>
 
 </html>
