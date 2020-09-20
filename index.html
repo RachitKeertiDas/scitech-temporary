@@ -17,6 +17,10 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript">
+  emailjs.init('user_hbLVWNuZJR4q9KexqLuxr')
+</script>
     <link href="https://fonts.googleapis.com/css?family=Sen:400,700&display=swap" rel="stylesheet">
     <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
@@ -81,16 +85,13 @@
         </div>
     </nav>
 
-
-
-
     <div class="content all">
     	<div class="container clubs" id="clubs">
             <p class="is-size-1-desktop is-size-2-touch sec-title navbarControl">Scitech<span class="teal"> Clubs</span></p>
             <div class="club-list columns has-text-centered is-2 is-variable is-multiline is-centered">
 
         <div class="column is-one-third-desktop is-one-third-tablet item is-centered">
-                  <div class="flip-card">
+           <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                 <img src="https://res.cloudinary.com/dwjvi33ve/image/upload/v1563539032/Aero/Aero_Logo_so0c3v.png" alt="Avatar" style="width:100%;height:100%;">
@@ -107,7 +108,6 @@
                         </div>
                      </div>
                 </div>
-
 
         <div class="column is-one-third-desktop is-one-third-tablet item is-centered">
                   <div class="flip-card">
@@ -203,7 +203,7 @@
                 <div class="flip-card-front">
                 <img src="https://res.cloudinary.com/dxj3caopc/image/upload/v1551664415/lambdalogoiit.png" alt="Avatar" style="width:100%;height:100%;">
                 </div>
-                <div class="flip-card-back" >
+                <div class="flip-card-back">
                      <h1>Lambda</h1> 
                           <p>The Development Club</p> 
                            <div class="mask has-text-centered">
@@ -641,40 +641,42 @@
             </div>
             <div class="column is-one-third-desktop is-one-third-tablet item">
                 <div class="field">
-                    <label class="label">Name</label>
+                  <form id="form">
+                    <label class="label" for="from_name">Name</label>
                     <div class="control has-icons-left">
-                        <input class="input" type="text" placeholder="John Williams">
+                        <input class="input" type="text" name="from_name" placeholder="John Williams">
                         <span class="icon is-small is-left" style="color:rgb(65, 72, 81);">
                             <i class="fas fa-user"></i>
                         </span>
                     </div>
                 </div>
                 <div class="field">
-                    <label class="label">Email</label>
+                    <label class="label" for="user_email">Email</label>
                     <div class="control has-icons-left">
-                        <input class="input" type="email" placeholder="johnwilliams@mail.com">
+                        <input class="input" type="email" name="user_email" placeholder="johnwilliams@mail.com" required>
                         <span class="icon is-small is-left" style="color:rgb(65, 72, 81);">
                             <i class="fas fa-envelope"></i>
                         </span>
                     </div>
                 </div>
                 <div class="field">
-                    <label class="label">Subject</label>
+                    <label class="label" for="subject">Subject</label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="Subject">
+                        <input class="input" type="text" name="subject" placeholder="Subject" required>
                     </div>
                 </div>
                 <div class="field">
                     <label class="label">Message</label>
                     <div class="control">
-                        <textarea class="textarea" placeholder="Enter your message here"></textarea>
+                        <textarea name="message" class="textarea" placeholder="Enter your message here"  required ></textarea>
                     </div>
                 </div>
                 <div class="field ">
                     <div class="control is-expanded">
-                        <button class="button " style="width: 100%;">Submit</button>
+                        <button class="button" type="submit" id="submit-btn" form="form" value="submit" style="width: 100%;">Submit</button>
                     </div>
                 </div>
+              </form>
             </div>
         </div>
     </div>
@@ -744,7 +746,30 @@
     </div>
     <script src="script.js"></script>
     <script>AOS.init();
+
 </script>
+    <script type="text/javascript">
+      const btn = document.getElementById('submit-btn');
+
+      document.getElementById('form')
+     .addEventListener('submit', function(event) {
+       event.preventDefault();
+
+       btn.value = 'Sending...';
+
+       const serviceID = 'default_service';
+       const templateID = 'template_ty9nq34';
+
+       emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+          btn.value = 'Send Email';
+          alert('Sent!');
+        }, (err) => {
+          btn.value = 'Send Email';
+          alert(JSON.stringify(err));
+        });
+    });
+    </script>
 </body>
 
 </html>
